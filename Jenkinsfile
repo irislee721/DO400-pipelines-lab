@@ -13,7 +13,7 @@ pipelin {
       parallel {
         stage('Unit tests'){
           steps{
-            ./mvnw test -D testGroups=unit
+            sh './mvnw test -D testGroups=unit'
           }
         }
         stage('Integration tests'){
@@ -23,7 +23,7 @@ pipelin {
             }
           }
           steps {
-            ./mvnw test -D testGroups=integration
+            sh './mvnw test -D testGroups=integration'
           }
         }
       }
